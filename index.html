@@ -10,27 +10,71 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
 
-    <link rel="icon" type="image/png" href="./images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
-    <link rel="shortcut icon" href="./images/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/favicon/png"
+      href="./images/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/favicon/svg+xml"
+      href="./images/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicon/apple-touch-icon.png"
+    />
     <meta name="apple-mobile-web-app-title" content="Teg" />
-    <link rel="manifest" href="./images/site.webmanifest" />
-
-
+    <link rel="manifest" href="./images/favicon/site.webmanifest" />
   </head>
   <body class="page">
     <header class="header page__section page__header">
-      <a class="header__logo">&lt;/HTML&gt;</a>
+      <a class="header__logo">&lt;/html&gt;</a>
       <h1 class="header__title">закрывающий тег</h1>
     </header>
     <main>
       <article class="card page__section page__card">
-        <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
-        <div class="card__image-container"></div>
-        <div class="card__description"></div>
-        <div class="card__controls"></div>
+        <h2 class="card__title">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h2>
+        <div class="card__image-container">
+          <span class="card__lable">&lt;/html&gt;</span>
+          <img
+            class="card-image"
+            src="./images/images_desktop/image_desktop.png"
+            srcset="
+              ./images/images_desktop/image_desktop.png    1x,
+              ./images/images_desktop/image_desktop-2x.png 2x,
+              ./images/images_desktop/image_desktop-3x.png 3x
+            "
+            alt="цветное изображение нарисованного фургона"
+            loading="lazy"
+          />
+        </div>
+        <div class="card__description">
+          <p>
+            Это было самое начало пути. На этом этапе важно было проникнуться
+            основами и настроиться на учёбу. И, возможно, подумать, как новые
+            знания могут повлиять на ваше будущее.
+          </p>
+          <p>Место для ваших воспоминаний о начале обучения.</p>
+        </div>
+        <div class="card__controls">
+          <button class="button card__icon-button is-liked"></button>
+          <button class="button card__like-button">
+            <span class="button__text">Like</span>
+          </button>
+        </div>
       </article>
+      <button class="button button__save">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+          <use href="./svg/floppy.svg#save-icon"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
