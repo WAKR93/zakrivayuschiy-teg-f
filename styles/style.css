@@ -149,10 +149,26 @@
   padding: 15px 20px;
 }
 
-.button__save .icon {
+button .icon {
   z-index: 1;
   width: 21px;
   mix-blend-mode: difference; 
+}
+
+dialog[open] {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: min-content 234px;
+  grid-template-rows: 1fr 1fr;
+}
+
+dialog .icon-big {
+  width: 39px;
+}
+
+.button__dialog {
+  margin-block-start: 10px;
+  grid-column: span 2;
 }
 
 .button:has(.button__text)::before {
