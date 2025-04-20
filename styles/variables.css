@@ -6,9 +6,11 @@
   --card-title-weight: 700;
   --main-font-size: 18px;
   --main-line-height: 21px;
-  --main-color: #000;
+  --accent-color: #000;
   --button-color: #fff;
   --main-bg-color: #fff;
+  --heart-color-black: #000;
+  --heart-color-red: #f00;
   --font-size-logo: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --font-size-header-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --header-padding-block: clamp(7.5rem, 6.9231rem + 2.4615vw, 8rem);

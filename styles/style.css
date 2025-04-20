@@ -143,15 +143,6 @@
   cursor: pointer;
 }
 
-.is-liked {
-  background-image: url(../images/heart.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
 .card__icon-button {
   border: 2px solid transparent;
   height: 38px; 
@@ -218,6 +209,7 @@
 .button:has(.button__text):hover::before {
   transform: scaleX(1);
 }
+
 
 /*-----------------------------------модальное окно--------------------------*/
 
