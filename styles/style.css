@@ -107,11 +107,11 @@
 
 .card-image {
   display: block;
-  aspect-ratio: 1 / 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: saturate(158%);
+  aspect-ratio: 1 / 1;
 }
 
 /*---------------------------описание карточки------------------------*/
@@ -143,10 +143,10 @@
   cursor: pointer;
 }
 
-.card__icon-button {
-  border: 2px solid transparent;
-  height: 38px; 
+.card__icon-button { 
   width: 43px;
+  height: 38px;
+  border: 2px solid transparent;
   transition: border 0.3s;
 }
 
@@ -215,11 +215,11 @@
 
 dialog[open] {
   display: grid;
-  align-items: center;
   grid-template-columns: min-content minmax(198px, 234px);
   grid-template-rows: min-content min-content;
-  column-gap: 20px;
+  align-items: center;
   row-gap: 30px;
+  column-gap: 20px;
   padding: 30px;
 }
 
@@ -229,8 +229,8 @@ dialog svg {
 
 #dialog-save-id > span.button__text {
   line-height: 150%;
-  text-transform: uppercase;
   text-align: start;
+  text-transform: uppercase;
   mix-blend-mode: normal;
 }
 

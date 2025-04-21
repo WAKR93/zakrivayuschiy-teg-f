@@ -64,9 +64,9 @@
   transition: fill .3s linear .06s;
 }
 
-.like-icon.is-liked  .heart {
-  animation: animation-scale-heart .3s ease-in .1s;          
+.like-icon.is-liked  .heart {          
   transform-origin: center;
+  animation: animation-scale-heart .3s ease-in .1s;
 }
 
 .like-icon.is-liked  .sparks {
