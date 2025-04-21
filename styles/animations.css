@@ -20,14 +20,14 @@
 
 .main-body {
   fill: transparent;
-  transition: fill 0.3s;
+  transition: fill .3s;
 }
 
 /*------------------------------hover кнопки heart--------------------------*/
 
 .card__icon-button:hover .core {
   fill: var(--heart-color-black, #000);
-  transition: fill 0.3s;
+  transition: fill .3s;
 }
 
 .card__icon-button:hover .main-body {
@@ -37,20 +37,6 @@
 
 /*------------------------------active кнопки heart--------------------------*/
 
-/*.card__icon-button:active .core {
-  fill: var(--heart-color-red, #ff0000);
-  transition: fill 0.3s;
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--heart-color-red, #ff0000);
-  transition: fill .3s .05s;
-}*/
-
-/*----------------------------нажатие на кнопку heart------------------------*/
-
-/*.like-icon.is-liked .core {
-}*/
 .card__icon-button:active .core {
   fill: var(--heart-color-red, #ff0000);
   transition: fill 0.3s;
@@ -61,22 +47,62 @@
   transition: fill .3s .05s;
 }
 
-.card__icon-button:active .contour {
+/*----------------------------нажатие на кнопку heart------------------------*/
+
+.like-icon.is-liked  .core {
   fill: var(--heart-color-red, #ff0000);
-  transition: fill .3s .1s;
+  transition: fill .3s;
 }
 
-.card__icon-button:active .heart {
-  animation: scale-heart 0.3s ease-in 0.1s;
-  overflow: hidden;
+.like-icon.is-liked  .main-body {
+  fill: var(--heart-color-red, #ff0000);
+  transition: fill .3s .05s;
 }
 
-@keyframes scale-heart {
+.like-icon.is-liked  .contour {
+  fill: var(--heart-color-red, #ff0000);
+  transition: fill .3s .06s;
+}
+
+.like-icon.is-liked  .heart {
+  animation: animation-scale-heart .3s ease-in .1s;          
+  transform-origin: center;
+}
+
+.like-icon.is-liked  .sparks {
+  animation: animation-opacity-sparks .3s ease-in .3s;
+}
+
+/*----------------------------повторное нажатие на кнопку heart------------------------*/
+
+.like-icon:not(.is-liked) .core,
+.like-icon:not(.is-liked) .main-body {
+  fill: transparent;
+}
+
+.like-icon:not(.is-liked) .contour {
+  fill: #000;
+  transition: fill .1s linear;
+}
+
+/*----------------------------keyframes для анимации heart------------------------*/
+
+@keyframes animation-scale-heart {
   from {
     transform:  scale(1);
   }
 
   to {
     transform:  scale(1.25);
+  }
+}
+
+@keyframes animation-opacity-sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
