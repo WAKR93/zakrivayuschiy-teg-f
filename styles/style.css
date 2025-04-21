@@ -143,7 +143,7 @@
   cursor: pointer;
 }
 
-.card__icon-button { 
+.card__icon-button {
   width: 43px;
   height: 38px;
   border: 2px solid transparent;
@@ -193,7 +193,7 @@
 
 .button:not(.card__icon-button):focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color, #000);
-  transition: box-shadow 0.5s ease-in-out;       
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .button:has(.button__text)::before {
@@ -209,7 +209,6 @@
 .button:has(.button__text):hover::before {
   transform: scaleX(1);
 }
-
 
 /*-----------------------------------модальное окно--------------------------*/
 
@@ -270,11 +269,7 @@ dialog::backdrop {
 }
 
 .page__experience {
-  filter: saturate(200%) 
-          sepia(0.5) 
-          hue-rotate(80deg) 
-          blur(1.5px) 
-          opacity(0.75);
+  filter: saturate(200%) sepia(0.5) hue-rotate(80deg) blur(1.5px) opacity(0.75);
 }
 
 /*------------------------------------директивы---------------------------*/

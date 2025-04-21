@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --accent-font: 'PressStart2P';
-  --main-font: 'Inter';
+  --accent-font: "PressStart2P";
+  --main-font: "Inter";
   --main-weight-text: 400;
   --card-title-weight: 700;
   --main-font-size: 18px;
@@ -15,8 +15,19 @@
   --font-size-header-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --header-padding-block: clamp(7.5rem, 6.9231rem + 2.4615vw, 8rem);
   --page-size-inline: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  --main-bg-gradient: 
-            repeating-linear-gradient(to right, transparent 0, transparent 2px, #d3d3d3 0, #d3d3d3 4px), 
-            repeating-linear-gradient(to bottom, transparent 0, transparent 2px, #d3d3d3 0, #d3d3d3 4px),
-            linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --main-bg-gradient: repeating-linear-gradient(
+      to right,
+      transparent 0,
+      transparent 2px,
+      #d3d3d3 0,
+      #d3d3d3 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2px,
+      #d3d3d3 0,
+      #d3d3d3 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 }
