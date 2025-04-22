@@ -16,7 +16,7 @@
   font-family: var(--main-font), sans-serif;
   font-size: var(--main-font-size, 18px);
   line-height: var(--main-line-height, 21px);
-  background-image: var(--main-bg-gradient);
+  background-image: var(--main-bg-gradient, #fff);
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -26,18 +26,19 @@
 
 .page__section {
   margin: 0 auto;
+  border: 2px solid currentColor;
   inline-size: var(--page-size-inline, 50%);
 }
 
-/*-----------------------------------шапка--------------------------*/
+/* -----------------------------------шапка--------------------------*/
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
-  border: 2px solid currentColor;
-  padding-block: var(--header-padding-block);
+  padding-block: var(--header-padding-block, 120px);
   font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
   background-color: var(--main-bg-color, #fff);
@@ -45,39 +46,39 @@
 
 .header__logo {
   font-size: var(--font-size-logo, 49px);
+  line-height: 100%;
 }
 
 .header__title {
   font-size: var(--font-size-header-title, 14px);
-  text-align: center;
+  line-height: 100%;
 }
 
 .page__header {
   margin-block-end: 100px;
 }
 
-/*---------------------------------карточки--------------------------*/
+/* ---------------------------------карточки--------------------------*/
 
 .card {
   position: relative;
-  border: 2px solid currentColor;
   background-color: var(--main-bg-color, #fff);
 }
 
 .card:not(:last-child) {
-  margin-block-end: 52px;
+  margin-block-end: 50px;
 }
 
-/*---------------------------заголовок карточки------------------------*/
+/* ---------------------------заголовок карточки------------------------*/
 
 .card__title {
   padding: 5px 10px;
-  font-size: inherit;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 21px;
   font-variation-settings: "wght" var(--card-title-weight, 700);
 }
 
-/*---------------------изображение и лэйбл карточки--------------------*/
+/* ---------------------изображение и лэйбл карточки--------------------*/
 
 .card__image-container {
   position: relative;
@@ -86,9 +87,9 @@
   overflow: hidden;
 }
 
-.card:nth-child(1) .card__lable,
-.card:nth-child(2) .card__lable,
-.card:nth-child(3) .card__lable {
+.zero__sprint .card__lable,
+.first__sprint-begin .card__lable,
+.first__sprint-doubts .card__lable {
   text-transform: uppercase;
 }
 
@@ -114,7 +115,7 @@
   aspect-ratio: 1 / 1;
 }
 
-/*---------------------------описание карточки------------------------*/
+/* ---------------------------описание карточки------------------------*/
 
 .card__description {
   padding: 25px;
@@ -124,13 +125,13 @@
   padding-block-end: 27px;
 }
 
-/*---------------------------кнопки карточки------------------------*/
+/* ---------------------------кнопки карточки------------------------*/
 
 .card__controls {
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   padding: 0 25px 25px;
 }
 
@@ -165,7 +166,7 @@
   font-feature-settings: "wght" var(--main-weight-text, 400);
 }
 
-/*---------------------------кнопка save------------------------*/
+/* ---------------------------кнопка save------------------------*/
 
 .button__save {
   display: flex;
@@ -181,7 +182,7 @@
   mix-blend-mode: difference;
 }
 
-/*---------------------------------состояния кнопок--------------------------*/
+/* ---------------------------------состояния кнопок--------------------------*/
 
 .button:focus {
   outline: none;
@@ -210,69 +211,83 @@
   transform: scaleX(1);
 }
 
-/*-----------------------------------модальное окно--------------------------*/
+/* -----------------------------------модальное окно--------------------------*/
 
 dialog[open] {
   display: grid;
   grid-template-columns: min-content minmax(198px, 234px);
   grid-template-rows: min-content min-content;
   align-items: center;
+  justify-content: start;
+  border: 2px solid currentColor;
   row-gap: 30px;
   column-gap: 20px;
   padding: 30px;
 }
 
 dialog svg {
-  block-size: 2.167em;
+  block-size: 39px;
+  inline-size: 39px;
 }
 
-#dialog-save-id > span.button__text {
+#dialog-save-id > p.button__text {
   line-height: 150%;
   text-align: start;
   text-transform: uppercase;
   mix-blend-mode: normal;
 }
 
-.button__dialog {
+#dialog-save-id > form {
   grid-column: span 2;
-  block-size: 38px;
+}
+
+.button__dialog {
+  inline-size: 100%;
+  max-block-size: 38px;
+  padding: 9px 17px;
+}
+
+.button__dialog.button__text {
+  font-size: 14px;
+  line-height: 90%;
+  text-transform: uppercase;
 }
 
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
 
-/*--------------------------------------фильтры-----------------------------*/
+/* --------------------------------------фильтры-----------------------------*/
 
-.page__html {
+.filter__saturate-min {
   filter: saturate(20%);
 }
 
-.page__css {
+.filter__saturate-max {
   filter: saturate(400%);
 }
 
-.page__desigions {
+.filter__hue-rotate {
   filter: hue-rotate(25deg);
 }
 
-.page__care {
+.filter__invert {
   filter: invert(80%);
 }
 
-.page__support {
+.filter__sepia {
   filter: sepia(0.9);
 }
 
-.page__lifes-style {
+.filter__blur {
   filter: blur(10px);
 }
 
-.page__experience {
+.multifilter {
   filter: saturate(200%) sepia(0.5) hue-rotate(80deg) blur(1.5px) opacity(0.75);
 }
 
-/*------------------------------------директивы---------------------------*/
+/* ------------------------------------директивы---------------------------*/
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .card__lable {
@@ -287,11 +302,21 @@ dialog::backdrop {
     --page-size-inline: 100vw;
   }
 
+  .card__lable {
+    inset-block-start: 1.386em;
+    inset-inline-end: 0.786em;
+  }
+
   .button__save {
     flex-direction: column;
   }
 
   .button__save svg {
     block-size: 1.556em;
+  }
+
+  dialog[open] {
+    max-inline-size: 341px;
+    padding-inline: 40px;
   }
 }

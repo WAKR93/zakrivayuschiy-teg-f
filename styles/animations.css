@@ -27,7 +27,7 @@
   fill: var(--heart-color-black, #000);
   transition: fill 0.1s linear;
 }
-/*------------------------------hover кнопки heart--------------------------*/
+/* ------------------------------hover кнопки heart--------------------------*/
 
 .like-icon:hover .core {
   fill: var(--heart-color-black, #000);
@@ -39,7 +39,7 @@
   transition: fill 0.3s linear 0.05s;
 }
 
-/*------------------------------active кнопки heart--------------------------*/
+/* ------------------------------active кнопки heart--------------------------*/
 
 .like-icon:active .core {
   fill: var(--heart-color-red, #ff0000);
@@ -51,7 +51,7 @@
   transition: fill 0.3s linear 0.05s;
 }
 
-/*----------------------------нажатие на кнопку heart------------------------*/
+/* ----------------------------нажатие на кнопку heart------------------------*/
 
 .like-icon.is-liked .core {
   fill: var(--heart-color-red, #ff0000);
@@ -77,7 +77,7 @@
   animation: animation-opacity-sparks 0.3s ease-in 0.3s;
 }
 
-/*----------------------------keyframes для анимации heart------------------------*/
+/* ----------------------------keyframes для анимации heart------------------------*/
 
 @keyframes animation-scale-heart {
   from {
