@@ -245,9 +245,10 @@ dialog svg {
   inline-size: 100%;
   max-block-size: 38px;
   padding: 9px 17px;
+  
 }
 
-.button__dialog.button__text {
+.button__dialog .button__text {
   font-size: 14px;
   line-height: 90%;
   text-transform: uppercase;
@@ -320,3 +321,6 @@ dialog::backdrop {
     padding-inline: 40px;
   }
 }
+
+/* И снова дурацкие ошибки по невнимательности( Тороплюсь! Иначе не успею сдать работу, 
+много прочих дел. Спасибо вам за терпение и наставление! Всего вам доброго!*/
